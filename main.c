@@ -23,16 +23,6 @@ volatile uint8_t ledState       = 0;
 #define LED_2 			11
 #define LED_3			12
 
-// ... biến toàn cục như bạn đã cung cấp, giữ nguyên
-
-// Các hàm clock_init, gpio_init, timer1/2/3_init, uart1_init,
-// USART1_IRQHandler, EXTI1_IRQHandler, TIMx IRQ handlers,
-// uart_send_char/string, toggleLED() giữ nguyên cấu trúc
-// chỉ cần thêm #include "stm32f3xx.h" và sửa đổi RCC register theo F303
-
-// Trong timer init, dùng RCC->AHBENR và APB1ENR/APB2ENR tương ứng
-// VD: RCC->APB2ENR |= RCC_APB2ENR_TIM1EN; RCC->APB1ENR |= RCC_APB1ENR_TIM2EN ...
-
 void uart1_init(void)
 {
     RCC->AHBENR |= RCC_AHBENR_GPIOAEN;
