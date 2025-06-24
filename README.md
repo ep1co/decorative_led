@@ -1,5 +1,5 @@
 # decorative_led
-Controlling leds with nucleo F401RE and receive command from terminal emulator.
+Interactive LED system using nucleo F401RE and receive command from terminal emulator.
 
 This code controls 3 leds with an user push button and turn on each led by inserting command to the terminal emulator. There are plenty of ideas to customise the 
 project like adding more leds/buttons, using external I2C monitor (OLED/LCD) instead of emulators like PuTTY, terraterm,...
