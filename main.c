@@ -78,7 +78,7 @@ void USART2_IRQHandler(void) {
                 led_state[0] = !led_state[0]; // RED
             } else if(strncmp(buf, "123Y", 4) == 0) {
                 led_state[1] = !led_state[1]; // YELLOW
-            } else if(strncmp(buf, "123B", 4) == 0) {
+            } else if(strncmp(buf, "123G", 4) == 0) {
                 led_state[2] = !led_state[2]; // GREEN
             }
             update_leds();
